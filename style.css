@@ -1,0 +1,277 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+
+body {
+  background: #0a0a0a;
+  color: white;
+}
+
+/* HEADER */
+.header {
+  width: 100%;
+  padding: 20px 60px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: rgba(0,0,0,0.85);
+  position: sticky;
+  top: 0;
+  z-index: 999;
+}
+
+.logo {
+  font-size: 26px;
+  font-weight: 700;
+}
+
+.logo span {
+  color: #00ffff;
+  text-shadow:
+    0 0 5px #00ffff,
+    0 0 10px #00ffff,
+    0 0 20px #00ffff;
+}
+
+/* NAV */
+.nav a {
+  margin: 0 15px;
+  text-decoration: none;
+  color: #ccc;
+  font-size: 16px;
+  transition: 0.3s;
+}
+
+.nav a:hover {
+  color: #00ffee;
+}
+
+/* BUTTONS */
+.btn {
+  padding: 12px 26px;
+  border-radius: 30px;
+  font-weight: 600;
+  text-decoration: none;
+  transition: 0.3s ease;
+}
+
+.main-btn {
+  background: linear-gradient(45deg, #00ffee, #0066ff);
+  color: black;
+}
+
+.btn.primary {
+  background: #00ffee;
+  color: #000;
+  box-shadow: 0 0 20px rgba(0,255,238,0.4);
+}
+
+.btn.secondary {
+  border: 2px solid #00ffee;
+  color: #00ffee;
+}
+
+/* HERO */
+.hero {
+  height: 100vh;
+  background: url('imia1.jpg') no-repeat center/cover;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+
+.overlay {
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(circle at center, rgba(0,0,0,0.4), rgba(0,0,0,0.75));
+}
+
+.hero-content {
+  text-align: center;
+  position: relative;
+  z-index: 2;
+  max-width: 700px;
+}
+
+.hero-content h1 {
+  font-size: 3.2rem;
+  margin-bottom: 15px;
+}
+
+.hero-content p {
+  font-size: 1.2rem;
+  margin-bottom: 35px;
+  opacity: 0.85;
+}
+
+.hero-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}
+
+/* ABOUT */
+.about-section {
+  background: #0f0f14;
+  padding: 100px 10%;
+}
+
+.about-container {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 50px;
+}
+
+.image-glow {
+  padding: 10px;
+  border-radius: 20px;
+  background: transparent;
+  box-shadow:
+    0 0 20px rgba(0, 174, 255, 0.35),
+    0 0 50px rgba(0, 174, 255, 0.15);
+}
+
+.image-glow img {
+  width: 360px;
+  height: 220px;
+  object-fit: cover;
+  border-radius: 16px;
+  display: block;
+}
+
+.about-content h2 {
+  font-size: 3rem;
+  margin-bottom: 20px;
+  background: linear-gradient(90deg, #00aaff, #a855f7);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.about-content p {
+  font-size: 1.1rem;
+  line-height: 1.8;
+  color: #cfd3ff;
+}
+
+.skills {
+  margin-top: 25px;
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+.skills span {
+  padding: 10px 20px;
+  border-radius: 30px;
+  background: rgba(255,255,255,0.05);
+  border: 1px solid rgba(0,255,238,0.3);
+  color: #00ffee;
+}
+
+/* PORTFOLIO */
+.portfolio-section {
+  background: #0f0f14;
+  padding: 100px 10%;
+  text-align: center;
+}
+
+.portfolio-section h2 {
+  font-size: 3rem;
+  margin-bottom: 50px;
+}
+
+.portfolio-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 30px;
+}
+
+.portfolio-item {
+  height: 220px;
+  border-radius: 20px;
+  background-size: cover;
+  background-position: center;
+  position: relative;
+  text-decoration: none;
+  overflow: hidden;
+  border: 1px solid rgba(255,255,255,0.08);
+  transition: 0.3s ease;
+}
+
+.portfolio-item:hover {
+  transform: scale(1.04);
+  box-shadow: 0 0 30px rgba(0,255,238,0.3);
+}
+
+.project-title {
+  position: absolute;
+  bottom: 15px;
+  left: 20px;
+  background: rgba(0,0,0,0.6);
+  padding: 6px 16px;
+  border-radius: 20px;
+  font-size: 17px;
+}
+
+/* CONTACT */
+.contact-section {
+  background: #0a0a0a;
+  padding: 100px 10%;
+  text-align: center;
+}
+
+.contact-section h2 {
+  font-size: 3rem;
+  margin-bottom: 40px;
+}
+
+.contact-form {
+  max-width: 500px;
+  margin: 0 auto 50px auto;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.contact-form input,
+.contact-form textarea {
+  background: rgba(255,255,255,0.05);
+  border: 1px solid rgba(0,255,238,0.2);
+  padding: 15px 20px;
+  color: white;
+  border-radius: 12px;
+  font-size: 15px;
+  outline: none;
+}
+
+.contact-form textarea {
+  resize: none;
+  height: 140px;
+}
+
+.contact-box {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+}
+
+.contact-item {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  background: rgba(255,255,255,0.05);
+  padding: 18px 35px;
+  border-radius: 50px;
+}
+
+.contact-item img {
+  width: 36px;
+  height: 36px;
+}
